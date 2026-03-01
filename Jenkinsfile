@@ -30,7 +30,9 @@ pipeline {
 
         stage('Stage 3 - Build Docker Image') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                dir('proj4-app') {
+                    sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                }
             }
         }
 
