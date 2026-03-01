@@ -15,7 +15,7 @@ pipeline {
 
         stage('Stage 1 - Clone') {
             steps {
-                git branch: 'main', 
+                git branch: 'master', 
                     url: 'https://github.com/Demirors07/proj4.git'
             }
         }
