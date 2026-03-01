@@ -22,7 +22,9 @@ pipeline {
 
         stage('Stage 2 - Build Jar') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                dir('proj4-app') {
+                    sh 'mvn clean package -DskipTests'
+                }
             }
         }
 
