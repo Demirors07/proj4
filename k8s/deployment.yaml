@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proj4-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: proj4-app
+  template:
+    metadata:
+      labels:
+        app: proj4-app
+    spec:
+      containers:
+      - name: proj4-app
+        image: karne07/proj4-app:latest
+        ports:
+        - containerPort: 8080
