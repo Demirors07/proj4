@@ -1,4 +1,4 @@
-apiVersion: app/v1
+apiVersion: v1
 # Pod'lara ağ erişimi
 kind: Service
 metadata:
